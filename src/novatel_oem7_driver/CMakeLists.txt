@@ -153,13 +153,11 @@ install(TARGETS ${PROJECT_NAME}
 )
 
 install(FILES ${PROJECT_NAME}_plugins.xml DESTINATION share)
-install(DIRECTORY config DESTINATION share/${PROJECT_NAME} FILES_MATCHING PATTERN "*.yaml")
-install(DIRECTORY launch DESTINATION share/${PROJECT_NAME} FILES_MATCHING PATTERN "*.py")
-install(DIRECTORY launch DESTINATION share/${PROJECT_NAME} FILES_MATCHING PATTERN "*.launch")
-
-
-ament_python_install_package(${PROJECT_NAME})
-
+install(DIRECTORY
+  launch
+  config
+  DESTINATION share/${PROJECT_NAME}/
+)
 ament_package()
 
 
