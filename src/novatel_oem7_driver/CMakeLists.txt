@@ -109,12 +109,14 @@ ament_target_dependencies(${PROJECT_NAME}
 	nav_msgs
 	tf2_geometry_msgs 
 	novatel_oem7_msgs 
+   rclcpp_components
 )
 
 
 ament_target_dependencies(${PROJECT_NAME}_exe 
-    rclcpp
-	pluginlib
+   rclcpp
+   rclcpp_components
+   pluginlib
 	novatel_oem7_msgs 
 )
 
